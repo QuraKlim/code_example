@@ -1,0 +1,41 @@
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.projects_list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.projects {
+  margin-top: 100px;
+}
+
+.animated {
+  animation: show var(--animation-func) forwards;
+}
+
+.empty_page {
+  min-height: 100vh;
+}
+
+@media (max-width: 1340px) {
+  .projects {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .projects {
+    padding: 0 10px;
+    &_list {
+      gap: 15px;
+    }
+  }
+}

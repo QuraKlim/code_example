@@ -1,0 +1,86 @@
+.accordeon {
+  margin-top: 100px;
+  & > p {
+    margin-bottom: 50px;
+  }
+}
+
+.advantages {
+  margin-top: 250px;
+}
+
+.tabs_section {
+  margin-top: 250px;
+}
+
+.ended_projects {
+  margin-top: 200px !important;
+}
+
+.accordeon_sec {
+  margin-top: 250px;
+}
+
+.contact {
+  padding: 0 20px;
+}
+
+.our_projects {
+  margin-top: 200px;
+}
+
+@media (max-width: 1340px) {
+  .accordeon,
+  .advantages,
+  .tabs_section,
+  .ended_projects,
+  .accordeon_sec {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .accordeon {
+    margin-top: 125px;
+  }
+  .advantages {
+    margin-top: 200px;
+  }
+  .tabs_section {
+    margin-top: 175px;
+  }
+  .ended_projects {
+    margin-top: 175px !important;
+  }
+  .accordeon_sec {
+    margin-top: 200px;
+  }
+  .our_projects {
+    margin-top: 175px;
+  }
+}
+
+@media (max-width: 425px) {
+  .accordeon {
+    margin-top: 150px;
+  }
+  .advantages {
+    margin-top: 150px;
+  }
+  .tabs_section {
+    margin-top: 100px;
+  }
+  .ended_projects {
+    margin-top: 150px !important;
+  }
+  .accordeon_sec {
+    margin-top: 150px;
+  }
+  .our_projects {
+    margin-top: 150px;
+  }
+
+  .contact {
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,61 @@
+.advantages {
+  &_wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  &_item {
+    min-width: 200px;
+    width: 23%;
+  }
+  &_line {
+    margin: 30px 0;
+  }
+  &_description {
+    margin-top: 20px;
+  }
+}
+
+.title_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-flow: row wrap;
+  margin-bottom: 150px;
+  row-gap: 30px;
+}
+
+@media (max-width: 1024px) {
+  .advantages {
+    &_wrapper {
+      justify-content: space-around;
+    }
+    &_item {
+      flex-basis: 40%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .advantages {
+    hr {
+      display: none;
+    }
+    &_wrapper {
+      row-gap: 50px;
+    }
+    &_item {
+      flex-basis: 100%;
+      display: flex;
+      gap: 45px;
+      column-gap: 71px;
+    }
+  }
+}
+
+@media (max-width: 435px) {
+  .title_wrap {
+    margin-bottom: 100px;
+  }
+}

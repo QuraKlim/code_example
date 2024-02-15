@@ -1,0 +1,84 @@
+// .ciricle {
+//   width: 100%;
+//   height: 100%;
+//   &_wrapper {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+//     border-radius: 100%;
+//     background-color: var(--yellow-color);
+//     padding: 15px;
+//     &.turn {
+//       width: 70px;
+//       height: 70px;
+//     }
+//   }
+// }
+
+// .icons_wrap {
+//   display: flex;
+//   flex-direction: column;
+//   transition: transform var(--animation-func);
+//   /* overflow: hidden; */
+//   &.active {
+//     transform: translateY(-100%);
+//   }
+// }
+
+// @media (max-width: 768px) {
+//   .ciricle_wrapper.turn {
+//     transform: scale(0.8);
+//   }
+// }
+
+// @media (max-width: 425px) {
+//   .ciricle_wrapper.turn {
+//     transform: scale(0.5);
+//   }
+// }
+
+.icon_wrapper,
+.icon_wrapper_turn {
+  background-color: var(--yellow-color);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+}
+
+.icon_wrapper_turn {
+  &.hovered {
+    .icons {
+      transform: translateY(-50%);
+    }
+  }
+  .window {
+    height: 35px;
+    overflow: hidden;
+  }
+  .icons {
+    transition: transform var(--animation-func);
+    .icon {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .icon_wrapper_turn {
+    .window {
+      height: 30px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .icon_wrapper_turn {
+    .window {
+      height: 25px;
+    }
+  }
+}

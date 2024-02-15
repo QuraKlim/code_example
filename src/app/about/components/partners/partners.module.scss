@@ -1,0 +1,38 @@
+.partners {
+  margin-top: 250px;
+  padding: 0 20px;
+  &_texts {
+    max-width: 50%;
+    p:first-child {
+      margin-bottom: 15px;
+    }
+  }
+  /* & > div {
+    gap: 25%;
+  } */
+}
+
+@media (max-width: 768px) {
+  .partners {
+    margin-top: 200px;
+    &_texts {
+      max-width: unset;
+    }
+    & > div {
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .partners {
+    margin-top: 150px;
+    padding: 0 10px;
+    &_texts {
+      p:first-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.img_wrap {
+  height: 530px;
+  max-width: 420px;
+  transition: all 300ms ease-in-out;
+  .img_skel {
+    height: 100%;
+    border-radius: 20px;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  .date {
+    width: 30%;
+  }
+}
+
+@media (max-width: 435px) {
+  .img_wrap {
+    height: 200px;
+  }
+  .img_skel {
+    border-radius: 20px 20px 50px 20px;
+  }
+  .description {
+    padding: 0px 10px;
+  }
+}

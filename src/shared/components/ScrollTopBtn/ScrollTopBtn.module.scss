@@ -1,0 +1,17 @@
+.btn_wrapper {
+  width: 310px;
+  display: flex;
+}
+
+.on_top_btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 435px) {
+  .btn_wrapper {
+    justify-content: flex-end;
+    width: auto;
+  }
+}

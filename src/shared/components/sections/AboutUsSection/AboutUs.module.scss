@@ -1,0 +1,32 @@
+.a_section {
+  max-width: 1340px;
+  margin: 0px auto;
+  padding: 0px 20px;
+}
+
+.title {
+  margin-bottom: 30px;
+}
+
+.letters_wrap {
+  margin-top: 100px;
+}
+
+@media (max-width: 435px) {
+  .a_section {
+    padding: 0px 10px;
+  }
+  .head_wrap,
+  .title {
+    padding: 0px 10px;
+  }
+  .carousel:not([data-keen-slider-disabled]) {
+    overflow: visible;
+  }
+  .letters_wrap {
+    margin-top: 100px;
+  }
+  .title {
+    margin-bottom: 50px;
+  }
+}

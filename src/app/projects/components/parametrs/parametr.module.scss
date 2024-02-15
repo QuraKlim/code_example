@@ -1,0 +1,44 @@
+.parametr {
+  border-radius: 100px;
+  border: 1px solid var(--light-color);
+  padding: 15px 30px;
+  &.active {
+    background-color: var(--yellow-color);
+  }
+  &_wrap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 10px;
+    row-gap: 20px;
+  }
+}
+
+.parametrs {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  & > p {
+    max-width: 430px;
+  }
+  &_wrap {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .parametrs {
+    flex-direction: column;
+    gap: 50px;
+    & > p {
+      max-width: unset;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .parametrs_wrap {
+    & p {
+      padding: 0px 10px;
+    }
+  }
+}

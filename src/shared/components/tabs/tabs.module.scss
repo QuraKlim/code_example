@@ -1,0 +1,239 @@
+@media (min-width: 769px) {
+  .tabs {
+    display: flex;
+    gap: 10%;
+    height: 740px;
+    &_photo {
+      min-width: 530px;
+      width: 530px;
+      position: relative;
+      &_curr {
+        animation: nextPhoto 1s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        border-radius: 20px;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+      }
+      &_prev {
+        border-radius: 20px;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+    &_wrapper {
+      display: flex;
+      flex-direction: column;
+      row-gap: 20px;
+      width: 58%;
+    }
+    &_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      gap: 20px;
+    }
+    &_headers_wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    &_title {
+      transition: color 0.5s linear;
+      display: inline-block;
+      &_underline {
+        position: absolute;
+        height: 4px;
+        left: 0;
+        right: 100%;
+        background: #f4f4f4;
+        &_progress {
+          background-color: var(--dark-color);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 100%;
+          bottom: 0;
+        }
+        &_hover {
+          position: absolute;
+          height: 100%;
+          background-color: var(--dark-color);
+        }
+      }
+      &:not(.active) {
+        .tabs_title_underline {
+          background-color: rgba(255, 255, 255, 0);
+          right: 0;
+          left: 0;
+        }
+        &.hovered {
+          .tabs_title_underline {
+            &_hover {
+              left: 0%;
+              right: 100%;
+              animation: fillUnderline 1s cubic-bezier(0.19, 1, 0.22, 1)
+                forwards;
+            }
+          }
+        }
+        &.unhovered {
+          .tabs_title_underline {
+            &_hover {
+              left: 0%;
+              right: 0%;
+              animation: removeUnderline 1s cubic-bezier(0.19, 1, 0.22, 1)
+                forwards;
+            }
+          }
+        }
+      }
+      &.active {
+        .tabs_title_underline {
+          animation: progressWrap 5s linear forwards;
+          &_progress {
+            animation: progressBar 5s linear;
+          }
+        }
+      }
+    }
+    &_item {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      &.fade_anim {
+        p {
+          animation: tabsContentSwitch 5s linear forwards;
+        }
+      }
+    }
+  }
+}
+
+.tabs_head {
+  white-space: pre-wrap;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1024px) {
+  .tabs {
+    height: 400px;
+    gap: 5%;
+    &_photo {
+      min-width: 350px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    flex-direction: column;
+    height: unset;
+    &_item {
+      margin-top: 70px;
+    }
+    &_photo {
+      height: 400px;
+      overflow: hidden;
+      width: 100%;
+      min-width: unset;
+      border-radius: 20px;
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+@media (max-width: 435px) {
+  .tabs {
+    &_photo {
+      height: 200px;
+    }
+  }
+  .text_wrap {
+    padding: 0px 10px;
+  }
+}
+
+@keyframes progressBar {
+  from {
+    right: 100%;
+  }
+  90% {
+    right: 0%;
+    left: 0%;
+  }
+  to {
+    left: 100%;
+    right: 0%;
+  }
+}
+
+@keyframes progressWrap {
+  from {
+    right: 100%;
+  }
+  10% {
+    right: 0%;
+  }
+  90% {
+    right: 0%;
+    left: 0%;
+  }
+  to {
+    left: 100%;
+    right: 0%;
+  }
+}
+
+@keyframes fillUnderline {
+  from {
+    right: 100%;
+  }
+  to {
+    right: 0%;
+  }
+}
+
+@keyframes removeUnderline {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes tabsContentSwitch {
+  from {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes nextPhoto {
+  from {
+    clip-path: inset(50% 50% 50% 50% round 20px);
+  }
+  to {
+    clip-path: inset(0% 0% 0% 0% round 20px);
+  }
+}

@@ -1,0 +1,33 @@
+.contact_wrap {
+  margin-top: 200px;
+  margin-bottom: 62px;
+  padding: 0px 20px;
+}
+
+.empty_button {
+  margin-top: 100px;
+}
+
+@media (max-width: 1340px) {
+  .contact_wrap,
+  .empty_button {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .empty_button {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 425px) {
+  .contact_wrap {
+    margin-top: 100px;
+    padding: 0 10px;
+  }
+  .empty_button {
+    margin-top: 30px;
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,94 @@
+.requisites_link {
+  max-width: 1340px;
+  padding: 0px 20px;
+}
+
+.link {
+  display: inline;
+  cursor: pointer;
+  text-decoration: none;
+  &_arrow {
+    vertical-align: middle;
+    margin-left: 5px;
+    transform: rotate(-45deg);
+  }
+  &_big {
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    &::after {
+      background-color: var(--dark-color);
+      transition: width 0.3s linear;
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 0%;
+      left: 0;
+      top: 100%;
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.req_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+  row-gap: 50px;
+  padding-right: 76px;
+}
+.social_links {
+  display: flex;
+  gap: 97px;
+  & a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+  }
+}
+
+.link_arrow {
+  vertical-align: middle;
+  margin-left: 5px;
+  transform: rotate(-45deg);
+}
+
+.requisites_link {
+  margin-top: 100px;
+}
+
+@media (max-width: 435px) {
+  .social_links {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+  .req_wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .link_big::after {
+    width: 100%;
+  }
+  .sber_logo {
+    width: 120px;
+    height: 15px;
+  }
+  .vk_logo {
+    width: 23px;
+    height: 13px;
+  }
+  .arrow_small {
+    width: 20px;
+    height: 20px;
+  }
+  .link_arrow {
+    width: 20px;
+    height: 20px;
+  }
+}

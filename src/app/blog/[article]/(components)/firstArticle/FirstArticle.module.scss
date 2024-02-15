@@ -1,0 +1,38 @@
+.container {
+  max-width: 1340px;
+  margin: 0px auto;
+  padding: 0px 20px;
+}
+
+.first_article {
+  margin-bottom: 200px;
+}
+
+.article_body {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  row-gap: 30px;
+}
+
+.article_text {
+  max-width: 620px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  & p {
+    white-space: pre-line;
+  }
+}
+
+.text_wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+@media (max-width: 768px) {
+  .first_article {
+    margin-bottom: 150px;
+  }
+}

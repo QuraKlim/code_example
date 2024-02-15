@@ -1,0 +1,141 @@
+.footer {
+  max-width: 1340px;
+  padding: 0px 20px;
+  margin-top: 62px;
+}
+
+.gloab_wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.services_list {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-items: flex-end;
+  row-gap: 70px;
+  margin: 50px 0px;
+}
+
+.services_list li {
+  width: 310px;
+}
+.services_list li:nth-child(1) {
+  .list_wrapper {
+    gap: 44px;
+  }
+}
+
+.list_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.logo_links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.services_types_list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.credentials_list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin: 70px 0px;
+  flex-flow: row wrap;
+  row-gap: 50px;
+}
+
+.list_elem {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 310px;
+}
+
+.btn_wrapper {
+  width: 310px;
+  display: flex;
+}
+
+.on_top_btn {
+  background-color: transparent;
+  border: none;
+}
+
+.credentials_list li:nth-child(4) {
+  max-width: 300px;
+}
+
+.credentials_list li:nth-child(4) p {
+  max-width: 250px;
+}
+
+@media (max-width: 768px) {
+  .list_wrapper {
+    gap: 30px;
+  }
+
+  .services_list li:nth-child(1) {
+    .list_wrapper {
+      gap: 24px;
+    }
+  }
+
+  .services_list li,
+  .credentials_list li {
+    width: 160px;
+    // min-width: 120px;
+  }
+  .list_elem {
+    max-width: 136px;
+  }
+  .credentials_list {
+    margin: 50px 0px;
+  }
+  .logo_links_text {
+    white-space: pre-wrap;
+  }
+}
+
+@media (max-width: 435px) {
+  .list_elem {
+    gap: 30px;
+  }
+  .credentials_list li:nth-child(1) {
+    order: 4;
+  }
+  .credentials_list li:nth-child(1) {
+    order: 2;
+  }
+  .credentials_list li:nth-child(4) {
+    p {
+      width: 176px;
+    }
+    white-space: pre-wrap;
+  }
+  .btn_wrapper {
+    justify-content: flex-end;
+    width: auto;
+  }
+  .list_elem {
+    width: auto;
+  }
+  .services_list li,
+  .credentials_list li {
+    width: 140px;
+  }
+  .footer_logo {
+    margin-top: -5px;
+    width: 126px;
+    height: 30px;
+  }
+}

@@ -1,0 +1,73 @@
+.link {
+  display: inline;
+  cursor: pointer;
+  text-decoration: none;
+  &_arrow {
+    vertical-align: middle;
+    margin-left: 5px;
+    transform: rotate(-45deg);
+  }
+  &_big {
+    position: relative;
+    cursor: pointer;
+    &::after {
+      background-color: var(--dark-color);
+      transition: width 0.3s linear;
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 0%;
+      left: 0;
+      top: 100%;
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.steps {
+  margin-top: 250px;
+}
+
+.requisites_link {
+  margin-top: 100px;
+}
+
+.map_wrapper {
+  margin-top: 100px;
+  height: 600px;
+  padding: 0 20px;
+}
+
+@media (max-width: 1340px) {
+  .requisites_link,
+  .steps {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .steps {
+    margin-top: 175px;
+  }
+}
+
+@media (max-width: 425px) {
+  .steps {
+    margin-top: 100px;
+    padding: 0 10px;
+  }
+  .requisites_link {
+    padding: 0 10px;
+  }
+  .map_wrapper {
+    padding: 0 10px;
+  }
+  .step_icon {
+    width: 40px;
+    height: 40px;
+  }
+}

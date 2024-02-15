@@ -1,0 +1,99 @@
+.icon {
+  width: 20px;
+  height: 20px;
+  &_wrapper {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@keyframes showModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modal {
+  &_container {
+    position: fixed;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(128, 128, 128, 0.288);
+    opacity: 0;
+    animation: showModal var(--animation-func) forwards;
+    cursor: pointer;
+    &.popup {
+      .modal_wrapper {
+        height: auto;
+      }
+    }
+  }
+  &_wrapper {
+    border-radius: 20px;
+    cursor: auto;
+    background-color: white;
+    padding: 100px 110px;
+    margin-top: 8vh;
+    height: 80vh;
+    position: relative;
+  }
+}
+
+.close_button {
+  padding: 10px;
+  position: absolute;
+  cursor: pointer;
+  right: 20px;
+  top: 20px;
+}
+
+@media (max-width: 1340px) {
+  .modal {
+    &_container {
+      padding: 0 20px;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .modal {
+    &_wrapper {
+      padding: 80px 40px 60px 40px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .modal {
+    &_container.popup {
+      .modal_wrapper {
+        max-height: 98vh;
+        overflow: hidden;
+      }
+    }
+    &_wrapper {
+      padding: 80px 20px 50px 20px;
+      margin-top: 1vh;
+    }
+  }
+  .close_button {
+    top: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .modal {
+    &_container {
+      padding: 0 10px;
+    }
+  }
+}

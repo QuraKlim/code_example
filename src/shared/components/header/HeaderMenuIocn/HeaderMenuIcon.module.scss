@@ -1,0 +1,12 @@
+.menu {
+  display: none;
+  pointer-events: auto;
+}
+
+@media (max-width: 1200px) {
+  .menu {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}

@@ -1,0 +1,45 @@
+.filter_btn,
+.filter_btn_y {
+  border-radius: 100px;
+  border: 1px solid rgba(28, 28, 34, 0.2);
+  background-color: transparent;
+  width: 148px;
+  height: 53px;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+}
+.filter_btn_y {
+  background-color: var(--yellow-color);
+  animation: btn 300ms ease-in-out;
+  border: 1px solid var(--yellow-color);
+}
+
+@keyframes btn {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: var(--yellow-color);
+  }
+}
+
+.filter {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 10px;
+  row-gap: 20px;
+  max-width: 640px;
+}
+
+@media (max-width: 524px) {
+  .filter {
+    row-gap: 10px;
+    padding: 0 10px;
+  }
+
+  .filter_btn,
+  .filter_btn_y {
+    width: 93px;
+    height: 35px;
+  }
+}

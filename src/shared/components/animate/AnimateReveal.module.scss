@@ -1,0 +1,32 @@
+.root {
+  will-change: opacity;
+  &.change_transform {
+    will-change: opacity, transform;
+  }
+
+  animation-duration: 400ms;
+
+  @keyframes fade-in-up {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+.show {
+  animation-name: fade-in-up;
+}
+
+.hide {
+  opacity: 0;
+}

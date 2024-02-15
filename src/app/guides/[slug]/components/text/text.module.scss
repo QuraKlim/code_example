@@ -1,0 +1,36 @@
+.guide {
+  &_section {
+    margin-top: 200px;
+    padding: 0 20px;
+  }
+  &_text {
+    display: flex;
+    gap: 20px;
+    & > * {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .guide {
+    &_section {
+      margin-top: 150px;
+    }
+    &_text {
+      flex-direction: column;
+      & > * {
+        width: unset;
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .guide {
+    &_section {
+      margin-top: 100px;
+      padding: 0 10px;
+    }
+  }
+}

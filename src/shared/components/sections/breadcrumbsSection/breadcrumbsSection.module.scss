@@ -1,0 +1,21 @@
+.section {
+  margin-top: 50px;
+}
+
+@media (max-width: 1340px) {
+  .section {
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 425px) {
+  .section {
+    margin-top: 20px;
+  }
+}

@@ -1,0 +1,11 @@
+.container,
+.link_wrap {
+  display: flex;
+  gap: 20px;
+}
+.link_wrap_truncate {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 240px;
+}

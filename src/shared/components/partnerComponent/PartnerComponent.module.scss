@@ -1,0 +1,30 @@
+.wrapper {
+  border-radius: 20px;
+  background: #f4f4f4;
+  transition: 300ms ease-out;
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & img {
+    transition: 300ms ease-out;
+    width: 80%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.wrapper:hover {
+  background-color: var(--yellow-color);
+  & img {
+    transform: scale(1.1);
+  }
+}
+
+@media (max-width: 375px) {
+  .wrapper {
+    width: 160px;
+    height: 160px;
+  }
+}

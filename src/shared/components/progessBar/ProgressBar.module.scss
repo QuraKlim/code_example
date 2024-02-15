@@ -1,0 +1,56 @@
+.hide {
+  display: none;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  height: 4px;
+  border-radius: 2px;
+  background: #f4f4f4;
+  width: 80%;
+  overflow: hidden;
+}
+
+.inner_line {
+  position: absolute;
+  height: 100%;
+  background: black;
+  transition-duration: 300ms;
+}
+
+.progress_bar_wrapper {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1300px;
+}
+
+.btn_wrapper {
+  display: flex;
+  gap: 42px;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .btn_wrapper {
+    display: none;
+  }
+  .wrapper {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  .progress_bar_wrapper {
+    padding: 0px 10px;
+  }
+}

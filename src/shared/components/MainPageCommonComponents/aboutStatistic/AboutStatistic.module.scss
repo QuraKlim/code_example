@@ -1,0 +1,37 @@
+.statistic_wrapper {
+  margin-bottom: 100px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  row-gap: 50px;
+}
+
+.statistic_list {
+  display: flex;
+  gap: 200px;
+  flex-flow: row wrap;
+  row-gap: 50px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 250px;
+}
+
+@media (max-width: 1024px) {
+  .statistic_list {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 425px) {
+  .statistic_list {
+    column-gap: 20px;
+  }
+  .statistic_list li {
+    max-width: 150px;
+  }
+}
